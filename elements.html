@@ -31,350 +31,243 @@
 
 								<!-- Text -->
 									<section>
-										<h2>下面的文字我没动过！</h2>
-										<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-										This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-										This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+										<h2>看看</h2>
+										<p><video src="https://xzhao233.github.io/MyData/Python%EF%BC%8C%E5%90%AF%E5%8A%A8.mp4" controls width="480" height="360">
+  Your browser does not support the <code>video</code> element.
+</video></p>
 										<hr />
-										<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+										<p>B站的最新视频awaa</p>
 										<hr />
-										<h2>Heading Level 2</h2>
-										<h3>Heading Level 3</h3>
-										<h4>Heading Level 4</h4>
+										<h2>奇特</h2>
 										<hr />
-										<h3>Blockquote</h3>
-										<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-										<h3>Preformatted</h3>
-										<pre><code>i = 0;
+										<h3>CyCode源代码</h3>
+										<blockquote>真不错，真不错</blockquote>
+										<h3>哈哈</h3>
+										<pre><code># 打开文件并写入内容
+FileTxt = open("file.txt", "w")
+FileTxt.write('''#用以下方式添加：xxx(英文代码):xxx(对应中文)
+abs:取绝对值
+all:判断是否全为True
+any:判断是否存在True
+bin:转二进制
+bool:转布尔
+bytearray:可变字节数组
+bytes:不可变字节数组
+chr:Unicode转字符
+dict:字典
+del:删除
+enumerate:枚举函数
+eval:返回值执行代码
+exec:执行代码
+filter:过滤集合
+float:转浮点数
+format:格式化
+frozenset:不可变集合
+getattr:获取对象属性
+globals:全局命名空间
+global:声明
+hasattr:判断属性
+hash:哈希值
+hex:转十六进制
+id:标识符
+input:输入
+int:转整数
+import:导入库
+isinstance:判断类型
+issubclass:判断类关系
+iter:创建迭代器
+len:获取长度
+list:列表
+locals:局部命名空间
+map:映射
+max:获取最大值
+min:获取最小值
+next:获取下一个元素
+object:所有类的基类
+oct:转八进制
+open:打开文件
+ord:转Unicode
+pow:幂运算
+print:输出
+range:数字序列
+repr:转可打印字符串形式
+reversed:反转序列
+round:四舍五入
+set:集合
+setattr:设置属性
+slice:切片操作
+sorted:排序集合
+str:字符串
+sum:求和
+super:获取父类方法
+tuple:元组
+type:获取类型
+vars:返回对象属性和属性值
+zip:合并
+findcode:查找代码
+''')
 
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
+# 关闭文件
+FileTxt.close()
 
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+import turtle
+
+turtle = turtle.Turtle()
+turtle.write("↓在下方输出区写代码↓", font=("Arial",14, "normal"))
+turtle.hideturtle()
+
+def GetCode_S1(ZhInput):
+    checksfilelist = []
+    checksfile = ''
+    for checks in ZhInput:
+        checksfilelist.append(checks)
+        if checks == ' ':
+            del checksfilelist[-1]
+            #删除最后一个字符，也就是空格
+            break
+    #获取空格前的文段，并保存在列表checksfilelist中
+    checksfile = ''.join(checksfilelist)
+    #转化成字符串
+    return checksfile
+
+def GetCode_S2(ZhInput):
+    GeS1 = GetCode_S1(ZhInput)
+    LenGeS1 = len(GeS1)
+    #获取GeS1的长度
+    GeS2 = ZhInput[LenGeS1+1:]
+    #获取GetCodeS1后后面内容
+    return GeS2
+def getconv(file = 'file.txt'):
+    result = {}
+    with open(file, 'r') as f:
+        lines = f.readlines()
+        #读取文件：file.txt
+    for line in lines[1:]:
+        name, value = line.strip().split(':')
+        result[value] = name
+        #获取文件中的信息
+    return result
+result = getconv()
+def findcode(codename:str,result = result) -> str:
+    for key, value in result.items():
+        if codename == value:
+            print('你要查找的代码名为：',key)
+            return key
+            break
+    print('你要查找的代码名为：','未找到')
+    return '未找到'
+def convcode(chicode,chicode2,result = result):
+    if chicode.startswith("【") == True:
+        start = chicode.find("【")
+        end = chicode.find("】")
+        #查找【和】的位置
+        if start != -1 and end != -1:
+            # 找到了指定的字符
+            content = chicode[start+1:end]
+            rest = chicode[end+1:]
+            for key, value in result.items():
+            #遍历result字典
+                if rest == key:
+                    if rest == '导入库' or rest == '声明' or rest == '删除':
+                        retcode = content + value+' '+chicode2
+                        return retcode
+                        break
+                    
+                    else:
+                        retcode = content + value+'('+chicode2+')'
+                        return retcode
+                        break
+                #如果在字典中找到对应值，则输出转化后的代码（转化函数名）
+    for key, value in result.items():
+        #遍历result字典
+        if chicode == key:
+            if chicode == '导入库' or chicode == '声明' or chicode == '删除':
+                retcode = value+' '+chicode2
+                return retcode
+                break
+            else:
+                retcode = value+'('+chicode2+')'
+                return retcode
+                break
+        #如果在字典中找到对应值，则输出转化后的代码（转化函数名）
+    retcode = chicode+'('+chicode2+')'
+    print('Warning:未找到对应代码，将使用输入的代码')
+    return retcode
+    #如果没有在字典中找到对应值，则输出转化后的代码（不转化函数名）
+willPrintTrip = True
+while True:
+    willRun = True
+    if willPrintTrip == True:
+        willPrintTrip = False
+        code = input('您可以输入“输出代码字典”获取代码字典\n您可以输入“查找代码”+空格+英文代码名（需要加引号）查找对应中文代码\n您可以输入“帮助”获取代码帮助\n输入中文代码：')
+    else:
+        willPrintTrip = False
+        code = input('输入中文代码：')
+    #根据willPrintTrip的值决定是否输出提示
+    if code == '输出代码字典':
+        for key, value in result.items():
+            print(key, ':', value)
+            willRun = False
+            #如果用户输入输出代码字典，则输出代码字典，且将willRun设置为False
+    if code == '帮助':
+        print('代码示例：\n输出 "你好,世界！"\n这行代码将输出你好世界\n合并 [1,2],[3,4]\n将合并列表')
+        input('按回车（Enter）继续...')
+        print('=======================\n【】内的代码为保留代码，如：【a=】转整数 "13"\n不要在【】里写空格！')
+        input('按回车（Enter）继续...')
+        print('=======================\n提示：不要使用可读性差的代码，如【a=】转整数 输入 "请输入："\n会导致报错')
+        input('按回车（Enter）继续...')
+        print('=======================\n如果一定要输入，请把后面级的代码写成普通py代码的形式')
+        input('按回车（Enter）继续...')
+        print('=======================\n我在Xpy里写了多个def模块，分别为：GetCode_S1()、GetCode_S2()、getconv()、convcode()、findcode()')
+        input('按回车（Enter）继续...')
+        print('=======================\n功能分别为：获取代码前半段，获取代码后半段，获取对应代码列表、转换代码、查找代码\n由Xzhao（黄楚钊）一人制作，未加入任何工作室')
+        input('按回车（Enter）继续...')
+        print('=======================\n使用库：turtle（绘制舞台区内容）\n目前版本：Xpy For GaotuCode Beta 3.1')
+        willRun = False
+        #如果用户输入帮助，则输出帮助，且将willRun设置为False
+    if willRun == True:
+        willRunCode = convcode(GetCode_S1(code),GetCode_S2(code))
+        print('Info:您执行的代码转换后：',willRunCode)
+        try:
+            exec(willRunCode)
+        except Exception as e:
+            print("Error:", e)
+        #如果willRun为True，则运行转换后的代码
+</code></pre>
 									</section>
 
-								<!-- Lists -->
-									<section>
-										<h2>Lists</h2>
-										<div class="row">
-											<div class="col-6 col-12-medium">
-												<h3>Unordered</h3>
-												<ul>
-													<li>Dolor pulvinar magna etiam.</li>
-													<li>Sagittis sed lorem adipiscing.</li>
-													<li>Felis enim etiam feugiat.</li>
-													<li>Ipsum lorem nullam consequat.</li>
-												</ul>
-												<h3>Alternate</h3>
-												<ul class="alt">
-													<li>Dolor pulvinar magna etiam.</li>
-													<li>Sagittis sed lorem adipiscing.</li>
-													<li>Felis enim etiam feugiat.</li>
-													<li>Ipsum lorem nullam consequat.</li>
-												</ul>
-											</div>
-											<div class="col-6 col-12-medium">
-												<h3>Ordered</h3>
-												<ol>
-													<li>Dolor pulvinar etiam.</li>
-													<li>Etiam vel felis viverra.</li>
-													<li>Felis enim feugiat.</li>
-													<li>Dolor pulvinar etiam.</li>
-													<li>Etiam vel felis lorem.</li>
-													<li>Felis enim et feugiat.</li>
-												</ol>
-												<h3>Icons</h3>
-												<ul class="icons">
-													<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-													<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-													<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-													<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-													<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-												</ul>
-												<ul class="icons">
-													<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-													<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-													<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-													<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-													<li><a href="#" class="icon brands alt fa-dribbble"><span class="label">Dribbble</span></a></li>
-												</ul>
-											</div>
-										</div>
-										<h2>Actions</h2>
-										<div class="row">
-											<div class="col-6 col-12-medium">
-												<ul class="actions">
-													<li><a href="#" class="button primary">Default</a></li>
-													<li><a href="#" class="button">Default</a></li>
-												</ul>
-												<ul class="actions small">
-													<li><a href="#" class="button primary small">Small</a></li>
-													<li><a href="#" class="button small">Small</a></li>
-												</ul>
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary">Default</a></li>
-													<li><a href="#" class="button">Default</a></li>
-												</ul>
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary small">Small</a></li>
-													<li><a href="#" class="button small">Small</a></li>
-												</ul>
-											</div>
-											<div class="col-6 col-12-medium">
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary fit">Default</a></li>
-													<li><a href="#" class="button fit">Default</a></li>
-												</ul>
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary small fit">Small</a></li>
-													<li><a href="#" class="button small fit">Small</a></li>
-												</ul>
-											</div>
-										</div>
-									</section>
-
-								<!-- Table -->
-									<section>
-										<h2>Table</h2>
-										<h3>Default</h3>
-										<div class="table-wrapper">
-											<table>
-												<thead>
-													<tr>
-														<th>Name</th>
-														<th>Description</th>
-														<th>Price</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Item One</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Two</td>
-														<td>Vis ac commodo adipiscing arcu aliquet.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Three</td>
-														<td> Morbi faucibus arcu accumsan lorem.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Four</td>
-														<td>Vitae integer tempus condimentum.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Five</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-												</tbody>
-												<tfoot>
-													<tr>
-														<td colspan="2"></td>
-														<td>100.00</td>
-													</tr>
-												</tfoot>
-											</table>
-										</div>
-
-										<h3>Alternate</h3>
-										<div class="table-wrapper">
-											<table class="alt">
-												<thead>
-													<tr>
-														<th>Name</th>
-														<th>Description</th>
-														<th>Price</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Item One</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Two</td>
-														<td>Vis ac commodo adipiscing arcu aliquet.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Three</td>
-														<td> Morbi faucibus arcu accumsan lorem.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Four</td>
-														<td>Vitae integer tempus condimentum.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Five</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-												</tbody>
-												<tfoot>
-													<tr>
-														<td colspan="2"></td>
-														<td>100.00</td>
-													</tr>
-												</tfoot>
-											</table>
-										</div>
-									</section>
-
-								<!-- Buttons -->
-									<section>
-										<h3>Buttons</h3>
-										<ul class="actions">
-											<li><a href="#" class="button primary">Primary</a></li>
-											<li><a href="#" class="button">Default</a></li>
-										</ul>
-										<ul class="actions">
-											<li><a href="#" class="button large">Large</a></li>
-											<li><a href="#" class="button">Default</a></li>
-											<li><a href="#" class="button small">Small</a></li>
-										</ul>
-										<ul class="actions fit">
-											<li><a href="#" class="button primary fit">Fit</a></li>
-											<li><a href="#" class="button fit">Fit</a></li>
-											<li><a href="#" class="button fit">Fit</a></li>
-										</ul>
-										<ul class="actions fit small">
-											<li><a href="#" class="button primary fit small">Fit + Small</a></li>
-											<li><a href="#" class="button fit small">Fit + Small</a></li>
-											<li><a href="#" class="button fit small">Fit + Small</a></li>
-										</ul>
-										<ul class="actions">
-											<li><a href="#" class="button primary icon solidfa-download">Icon</a></li>
-											<li><a href="#" class="button icon solid fa-upload">Icon</a></li>
-											<li><a href="#" class="button icon solid fa-save">Icon</a></li>
-										</ul>
-										<ul class="actions">
-											<li><span class="button primary disabled">Disabled</span></li>
-											<li><span class="button disabled">Disabled</span></li>
-										</ul>
-									</section>
-
-								<!-- Form -->
-									<section>
-										<h2>Form</h2>
-										<form method="post" action="#">
-											<div class="row gtr-uniform">
-												<div class="col-6 col-12-xsmall">
-													<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-												</div>
-												<div class="col-6 col-12-xsmall">
-													<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-												</div>
-												<div class="col-12">
-													<select name="demo-category" id="demo-category">
-														<option value="">- Category -</option>
-														<option value="1">Manufacturing</option>
-														<option value="1">Shipping</option>
-														<option value="1">Administration</option>
-														<option value="1">Human Resources</option>
-													</select>
-												</div>
-												<div class="col-4 col-12-small">
-													<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-													<label for="demo-priority-low">Low</label>
-												</div>
-												<div class="col-4 col-12-small">
-													<input type="radio" id="demo-priority-normal" name="demo-priority">
-													<label for="demo-priority-normal">Normal</label>
-												</div>
-												<div class="col-4 col-12-small">
-													<input type="radio" id="demo-priority-high" name="demo-priority">
-													<label for="demo-priority-high">High</label>
-												</div>
-												<div class="col-6 col-12-small">
-													<input type="checkbox" id="demo-copy" name="demo-copy">
-													<label for="demo-copy">Email me a copy</label>
-												</div>
-												<div class="col-6 col-12-small">
-													<input type="checkbox" id="demo-human" name="demo-human" checked>
-													<label for="demo-human">Not a robot</label>
-												</div>
-												<div class="col-12">
-													<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-												</div>
-												<div class="col-12">
-													<ul class="actions">
-														<li><input type="submit" value="Send Message" class="primary" /></li>
-														<li><input type="reset" value="Reset" /></li>
-													</ul>
-												</div>
-											</div>
-										</form>
-									</section>
-
-								<!-- Image -->
-									<section>
-										<h2>Image</h2>
-										<h3>Fit</h3>
-										<div class="box alt">
-											<div class="row gtr-uniform">
-												<div class="col-12"><span class="image fit"><img src="images/pic04.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-											</div>
-										</div>
-										<h3>Left &amp; Right</h3>
-										<p><span class="image left"><img src="images/pic05.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent lorem ipsum dolor sit amet veroeros consequat. Etiam tempus lorem ipsum.</p>
-										<p><span class="image right"><img src="images/pic06.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus..</p>
-									</section>
-
-							</section>
-
-					</div>
-
+								
 				<!-- Footer -->
 					<footer id="footer">
 						<section>
-							<h2>Aliquam sed mauris</h2>
-							<p>Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.</p>
+							<h2>这有什么好看的？</h2>
+							<p>版权不知道有没有，Xzhao233</p>
 							<ul class="actions">
-								<li><a href="#" class="button">Learn More</a></li>
+								<li><a href="#" class="button">再看一遍</a></li>
 							</ul>
 						</section>
 						<section>
 							<h2>Etiam feugiat</h2>
 							<dl class="alt">
-								<dt>Address</dt>
-								<dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd>
-								<dt>Phone</dt>
-								<dd>(000) 000-0000 x 0000</dd>
-								<dt>Email</dt>
-								<dd><a href="#">information@untitled.tld</a></dd>
+								<dt>QQ</dt>
+								<dd>2242922788</dd>
+								<dt>手机</dt>
+								<dd>+86 15913876380</dd>
+								<dt>电子邮箱</dt>
+								<dd><a href="#">2242922788@qq.com</a></dd>
 							</dl>
 							<ul class="icons">
-								<li><a href="#" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li>
+								<li><a href="https://www.twitter.com/Xzhao233" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
+								<li><a href="https://space.bilibili.com/2002758114" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
+								<li><a href="http://coding-oj.gaotu100.com/user-home?uid=1f27491b8d094b6d86c33c4a02a951ef&username=%E9%BB%84%E6%A5%9A%E9%92%8A" class="icon brands fa-instagram alt"><span class="label”>Instagram</span></a></li>
+								<li><a href="https://www.github.com/Xzhao233" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+								<li><a href="https://www.baidu.com/" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li>
 							</ul>
 						</section>
-						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+						<p class="copyright">这是我的 <a href="https://space.bilibili.com/2002758114">Bilibili个人主页</a>。</p>
 					</footer>
 
+			</div>
 			</div>
 
 		<!-- Scripts -->
