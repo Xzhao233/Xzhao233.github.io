@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>让Rick帮助你查找你的手机</title>
+  <style>
+    h1 {
+      font-size: 2.5em;
+    }
+    .highlight {
+      background-color: yellow;
+      border: 1px solid black;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="title">让Rick帮助你查找你的<span id="target">手机</span></h1>
+  <button id="findButton" style="width:150px;height:50px;">立即查找</button>
+  <br/><br/><video controls="controls" loop="loop" autoplay="autoplay" style="width:50%;vertical-align:middle;">
+    <source src="https://vdse.bdstatic.com/192d9a98d782d9c74c96f09db9378d93.mp4?authorization=bce-auth-v1/40f207e648424f47b2e3dfbb1014b1a5/2021-07-12T02:14:24Z/-1/host/530146520a1c89fb727fbbdb8a0e0c98ec69955459aed4b1c8e00839187536c9">
+  </video>
+  
+  <script>
+    const findButton = document.getElementById("findButton");
+    const target = document.getElementById("target");
+    
+    findButton.addEventListener("click", () => {
+      target.classList.add("highlight");
+    });
+  </script>
+</body>
+</html>
