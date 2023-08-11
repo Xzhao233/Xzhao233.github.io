@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>【Cpp】如何在你的电脑上搭建一个Cpp环境？ | Xzhao233 Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="（图片加载不出来可以刷新喵）（借用了一下知乎图片呜）（部分内容转载至https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;87864677和https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;71110525）Hi，这里是黄楚钊。今天我们来探讨一下，如何在电脑上面搭建个C++环境（本文分为3个部分，较长，可以用浏览器自带的页面搜索搜索使用Dev-C++安装、独立安装，并使用其他编辑器开发">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【Cpp】如何在你的电脑上搭建一个Cpp环境？">
+<meta property="og:url" content="https://xzhao233.github.io/blog/2023/08/11/%E3%80%90Cpp%E3%80%91%E5%A6%82%E4%BD%95%E5%9C%A8%E4%BD%A0%E7%9A%84%E7%94%B5%E8%84%91%E4%B8%8A%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AACpp%E7%8E%AF%E5%A2%83%EF%BC%9F/index.html">
+<meta property="og:site_name" content="Xzhao233 Blog">
+<meta property="og:description" content="（图片加载不出来可以刷新喵）（借用了一下知乎图片呜）（部分内容转载至https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;87864677和https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;71110525）Hi，这里是黄楚钊。今天我们来探讨一下，如何在电脑上面搭建个C++环境（本文分为3个部分，较长，可以用浏览器自带的页面搜索搜索使用Dev-C++安装、独立安装，并使用其他编辑器开发">
+<meta property="og:locale">
+<meta property="og:image" content="https://picx.zhimg.com/v2-a54693820c13000d550e9c9333a8ca84_r.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/v2-288149ad02ef1505e7a5275f86cef51c_r.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/v2-f21191dcc3f14d0890328be18a48a3f0_r.jpg">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-5128323a0e3608444d635c726b296ae5_720w.webp">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-d7b621190de3da284a562b5f264b332e_r.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/v2-3aae1eb09e5b78b306706ee3ed8693ac_r.jpg">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-ccdc30f87b6ebcd77858122300c7c04a_720w.webp">
+<meta property="og:image" content="https://pic4.zhimg.com/v2-54e2f5cad1e2561ae1704450c11b9afb_r.jpg">
+<meta property="og:image" content="https://pic2.zhimg.com/v2-b0e60d48a4d0111d6184870e03ac2db5_r.jpg">
+<meta property="og:image" content="https://pic4.zhimg.com/v2-cc609819e54faaa011535b8a1d78729f_r.jpg">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-dd25492f14ef601faff48615533f8f39_720w.webp">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-6285c8669d61d80a9b72b255e7d5c915_720w.webp">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-305226dc6bf7198f2cad2686b511cc02_r.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-0f6d57783c5bfb9fe5c6c525ec2771e8_720w.webp">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-91eedecc78231abd8d85e19998b2c3a4_720w.webp">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-d3101a91ccf15d8313d670b204cecf1a_r.jpg">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-a17abdb3713ab16406b4a62fb286bdce_r.jpg">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-80ceb20669ebf4f88b733a820228752e_720w.webp">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-cc066b77f8e4a60d4e3c7ed50fd10a0b_720w.webp">
+<meta property="og:image" content="https://pic2.zhimg.com/v2-d88e5debb5fe9c129cd576b830f5d935_r.jpg">
+<meta property="og:image" content="https://pic4.zhimg.com/v2-23a86669c94ced0093ce9030415a44fb_r.jpg">
+<meta property="og:image" content="https://pic2.zhimg.com/v2-a19cec1c47b5ce3784bcdefeef2c6edd_r.jpg">
+<meta property="og:image" content="https://pic2.zhimg.com/v2-99c55ed69cda406bbc0910de3b0ab4c1_r.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/v2-e456f68e9448fcdf3ca5736543ef7b98_r.jpg">
+<meta property="og:image" content="https://pic4.zhimg.com/v2-699c40ce8a61da1f13971d25b17fad2b_r.jpg">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-a79bac7a21488f57bc7bc5478a64c906_r.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/v2-139b4132826e4cb269dee66bfeb42cd0_r.jpg">
+<meta property="og:image" content="https://pic4.zhimg.com/v2-18979425c6e23c29201ab5b800a957fb_r.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/v2-f83e289be98ad69a13f1b0fdd5d2ccc0_r.jpg">
+<meta property="article:published_time" content="2023-08-11T02:50:39.000Z">
+<meta property="article:modified_time" content="2023-08-11T02:52:12.982Z">
+<meta property="article:author" content="Xzhao">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://picx.zhimg.com/v2-a54693820c13000d550e9c9333a8ca84_r.jpg">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="Xzhao233 Blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/blog/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">Xzhao233 Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/blog/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Suche"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://xzhao233.github.io/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-【Cpp】如何在你的电脑上搭建一个Cpp环境？" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/blog/2023/08/11/%E3%80%90Cpp%E3%80%91%E5%A6%82%E4%BD%95%E5%9C%A8%E4%BD%A0%E7%9A%84%E7%94%B5%E8%84%91%E4%B8%8A%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AACpp%E7%8E%AF%E5%A2%83%EF%BC%9F/" class="article-date">
+  <time class="dt-published" datetime="2023-08-11T02:50:39.000Z" itemprop="datePublished">2023-08-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      【Cpp】如何在你的电脑上搭建一个Cpp环境？
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>（图片加载不出来可以刷新喵<del>）<br>（借用了一下知乎图片呜</del>）<br>（部分内容转载至<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/87864677">https://zhuanlan.zhihu.com/p/87864677</a>和<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/71110525">https://zhuanlan.zhihu.com/p/71110525</a>）<br>Hi，这里是黄楚钊。<br>今天我们来探讨一下，如何在电脑上面搭建个C++环境<br>（本文分为3个部分，较长，可以用浏览器自带的页面搜索搜索<code>使用Dev-C++安装</code>、<code>独立安装，并使用其他编辑器开发</code>和<code>使用Visual Studio进行C++开发</code>快速跳转）</p>
+<span id="more"></span>
+<h3 id="1-使用Dev-C-安装"><a href="#1-使用Dev-C-安装" class="headerlink" title="1.使用Dev-C++安装"></a>1.使用Dev-C++安装</h3><p>这是最简单的了，也是挺轻量级的了，适合入门使用。首先，我们需要知道的是，现在的<code>Dev-C++</code>有许多的版本，比如<code>Embarcadero Dev-C++</code>，<code>小熊猫Dev-C++</code>等<br>我个人的话，推荐使用<code>小熊猫Dev-C++</code>，只需要去<a target="_blank" rel="noopener" href="https://royqh1979.gitee.io/redpandacpp/download/">小熊猫Dev-C++ 下载</a>，选择自己的系统版本后，一路安装即可。若还有更高需求，可以去附加库下载那里下载<br>👇这是界面👇<br><img src="https://picx.zhimg.com/v2-a54693820c13000d550e9c9333a8ca84_r.jpg" alt="hjjkjdaklja"></p>
+<h3 id="2-独立安装，并使用其他编辑器开发"><a href="#2-独立安装，并使用其他编辑器开发" class="headerlink" title="2.独立安装，并使用其他编辑器开发"></a>2.独立安装，并使用其他编辑器开发</h3><p>这是最难的，但是是最轻量级的。<br>我就用VSCode举例吧<br>先去<a target="_blank" rel="noopener" href="https://code.visualstudio.com/">VSCode下载</a>把VSCode下载下来。<br><img src="https://pic1.zhimg.com/v2-288149ad02ef1505e7a5275f86cef51c_r.jpg" alt="downloadvscode"><br>然后一步步安装即可。<br>现在，我们打开VSCode，按照图中的方法进行汉化<br><img src="https://pic1.zhimg.com/v2-f21191dcc3f14d0890328be18a48a3f0_r.jpg" alt="zhcnvsc"><br><img src="https://pic2.zhimg.com/80/v2-5128323a0e3608444d635c726b296ae5_720w.webp" alt="zhcnvsc2"></p>
+<p><strong>准备工作做好之后，就可以开始安装了</strong><br>我们先去<a target="_blank" rel="noopener" href="https://sourceforge.net/projects/mingw-w64/files/mingw-w64/mingw-w64-release/">sourceforge上的mingw项目</a>往下滑，找到关键字<strong>MinGW-W64 GCC-8.1.0</strong>，可以下载这两个中的一个：<br><img src="https://pic3.zhimg.com/v2-d7b621190de3da284a562b5f264b332e_r.jpg" alt="downmingw"><br>我更建议用第二个，因为第一个是在线安装包，会慢一些<br>如果你的是在线安装包，会看到这样一个界面，那么版本选最新版本，对语言的新特性有较好的支持；构架是32位和64位的选择，32位请选择x86；线程部分选择win32，如果是Linux请选择posix；异常模型部分选择默认的seh就好；最后一项只能选0。选好之后点击下一步。<br><img src="https://pic1.zhimg.com/v2-3aae1eb09e5b78b306706ee3ed8693ac_r.jpg" alt="aaaaa"></p>
+<p>如果你是离线安装包，或者在线包选好了，那么会看到下面的界面：<br><img src="https://pic3.zhimg.com/80/v2-ccdc30f87b6ebcd77858122300c7c04a_720w.webp" alt="bbbbb"><br>注意！！不能安装在有<strong>空格</strong>或者有<strong>中文</strong>的目录下！尤其是<strong>空格</strong>！因为默认安装目录（C:\Program Files）就是有<strong>空格</strong>的！如果你选了不符合要求的位置，那么后面可能会有各种各样不必要的麻烦！<br>现在，我们要把MinGW的bin目录添加到PATH。比如你安装在了C:\mingw64目录下面，那么你要添加的目录就是C:\mingw64\bin<br>打开计算机属性界面，按照下图操作：<br><img src="https://pic4.zhimg.com/v2-54e2f5cad1e2561ae1704450c11b9afb_r.jpg" alt="womenxihuanchidabian"><br>操作完之后，打开命令提示符或powershell，输入gcc -v，看看有没有安装好即可。<br>然后，打开VSCode，找到我们刚刚装中文拓展的页面，搜索C，安装一下<code>C/C++</code>拓展，如下图:<br><img src="https://pic2.zhimg.com/v2-b0e60d48a4d0111d6184870e03ac2db5_r.jpg" alt="yummyyummyhenduodabian"><br>直接安装即可。<br>然后，我们重启一遍VSCode，回到主界面，新建一个文件，在选择语言那里选择<code>C++</code>，输入以下代码：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;HelloWorld&quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后保存到一个.cpp文件里<br><strong>下面的内容为转载</strong></p>
+<p>然后，我们按ctrl+shift+p调出命令面板，输入<code>C/C++</code>，选择“Edit Configurations(UI)”进入配置。这里配置两个选项： </p>
+<ul>
+<li>编译器路径：<br>mingw安装位置&#x2F;bin&#x2F;g++.exe</li>
+<li>IntelliSense 模式：<br>gcc-x64<br><img src="https://pic4.zhimg.com/v2-cc609819e54faaa011535b8a1d78729f_r.jpg" alt="a"><br><img src="https://pic2.zhimg.com/80/v2-dd25492f14ef601faff48615533f8f39_720w.webp" alt="b"><br><img src="https://pic2.zhimg.com/80/v2-6285c8669d61d80a9b72b255e7d5c915_720w.webp" alt="c"><br>配置完成后，此时在侧边栏可以发现多了一个.vscode文件夹，并且里面有一个c_cpp_properties.json文件，内容如下，说明上述配置成功。现在可以通过Ctrl+&lt;&#96;快捷键打开内置终端并进行编译运行了。</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;configurations&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Win32&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;includePath&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">                <span class="string">&quot;$&#123;workspaceFolder&#125;/**&quot;</span></span><br><span class="line">            <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;defines&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">                <span class="string">&quot;_DEBUG&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot;UNICODE&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot;_UNICODE&quot;</span></span><br><span class="line">            <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">            <span class="comment">// 此处是编译器路径，以后可直接在此修改</span></span><br><span class="line">            <span class="attr">&quot;compilerPath&quot;</span><span class="punctuation">:</span> <span class="string">&quot;D:/mingw-w64/bin/g++.exe&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;cStandard&quot;</span><span class="punctuation">:</span> <span class="string">&quot;c11&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;cppStandard&quot;</span><span class="punctuation">:</span> <span class="string">&quot;c++17&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;intelliSenseMode&quot;</span><span class="punctuation">:</span> <span class="string">&quot;gcc-x64&quot;</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="number">4</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><img src="https://pic3.zhimg.com/v2-305226dc6bf7198f2cad2686b511cc02_r.jpg" alt="fsfs"><br>接下来，创建一个tasks.json文件来告诉VS Code如何构建（编译）程序。该任务将调用g++编译器基于源代码创建可执行文件。 按快捷键Ctrl+Shift+P调出命令面板，输入tasks，选择“Tasks:Configure Default Build Task”：</p>
+<p><img src="https://pic1.zhimg.com/80/v2-0f6d57783c5bfb9fe5c6c525ec2771e8_720w.webp" alt="sa"><br>再选择“C&#x2F;C++: g++.exe build active file”：<br><img src="https://pic1.zhimg.com/80/v2-91eedecc78231abd8d85e19998b2c3a4_720w.webp" alt="bi"><br>此时会出现一个名为tasks.json的配置文件，内容如下：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="comment">// See https://go.microsoft.com/fwlink/?LinkId=733558 </span></span><br><span class="line">    <span class="comment">// for the documentation about the tasks.json format</span></span><br><span class="line">    <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;tasks&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;shell&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;label&quot;</span><span class="punctuation">:</span> <span class="string">&quot;g++.exe build active file&quot;</span><span class="punctuation">,</span><span class="comment">// 任务的名字，就是刚才在命令面板中选择的时候所看到的，可以自己设置</span></span><br><span class="line">            <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;D:/mingw64/bin/g++.exe&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;args&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="comment">//编译时候的参数</span></span><br><span class="line">                <span class="string">&quot;-g&quot;</span><span class="punctuation">,</span><span class="comment">//添加gdb调试选项</span></span><br><span class="line">                <span class="string">&quot;$&#123;file&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot;-o&quot;</span><span class="punctuation">,</span><span class="comment">//指定生成可执行文件的名称</span></span><br><span class="line">                <span class="string">&quot;$&#123;fileDirname&#125;\\$&#123;fileBasenameNoExtension&#125;.exe&quot;</span></span><br><span class="line">            <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;options&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">                <span class="attr">&quot;cwd&quot;</span><span class="punctuation">:</span> <span class="string">&quot;D:/mingw64/bin&quot;</span></span><br><span class="line">            <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;problemMatcher&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">                <span class="string">&quot;$gcc&quot;</span></span><br><span class="line">            <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;group&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">                <span class="attr">&quot;kind&quot;</span><span class="punctuation">:</span> <span class="string">&quot;build&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="attr">&quot;isDefault&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="comment">//表示快捷键Ctrl+Shift+B可以运行该任务</span></span><br><span class="line">            <span class="punctuation">&#125;</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>然后，点击菜单栏的Debug–&gt;Start Debugging：<br><img src="https://pic3.zhimg.com/v2-d3101a91ccf15d8313d670b204cecf1a_r.jpg" alt="s"><br>选择C++(GDB&#x2F;LLDB)：<br><img src="https://pic3.zhimg.com/v2-a17abdb3713ab16406b4a62fb286bdce_r.jpg" alt="b"><br>紧接着会产生一个launch.json的文件：<br><img src="https://pic3.zhimg.com/80/v2-80ceb20669ebf4f88b733a820228752e_720w.webp" alt="sds"><br>这里笔者遇到一个问题，如果是在编写好的c++代码文件页面进行上述过程，会一直报”Unable to create ‘launch.json’ file inside the ‘.vscode’ folder (Cannot read property ‘name’ of undefined).”的错误，网上也没有找到相关的解决办法，就自己琢磨了半天，最后发现如果在之前已经创建好的json文件页面进行创建launch.json文件的过程，是可以正常进行的。笔者也没有弄懂这到底是什么原因。<br>【注】如果大家在进行 tasks.json 和 launch.json 的配置时遇到问题，比如上述笔者所遇到的无法构建的问题，还请不要气馁，可以对所遇到的错误进行搜索查找，看看是否有解决方案，如果实在没有的话，大家可以直接在.vscode文件夹下手动创建这两个文件，并将相应内容复制进去，也可完成环境配置。</p>
+<p>接下来读者可以点击Add Configuration按钮自己添加配置，也可以直接将笔者配置好的json文件内容复制过去，因为些配置对新手不是特别友好，相关具体细节还是需要参考官方文档。下面是笔者的launch.json文件的内容：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="comment">// Use IntelliSense to learn about possible attributes.</span></span><br><span class="line">    <span class="comment">// Hover to view descriptions of existing attributes.</span></span><br><span class="line">    <span class="comment">// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387</span></span><br><span class="line">    <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;0.2.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;configurations&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line"></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;(gdb) Launch&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;preLaunchTask&quot;</span><span class="punctuation">:</span> <span class="string">&quot;g++.exe build active file&quot;</span><span class="punctuation">,</span><span class="comment">//调试前执行的任务，就是之前配置的tasks.json中的label字段</span></span><br><span class="line">            <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;cppdbg&quot;</span><span class="punctuation">,</span><span class="comment">//配置类型，只能为cppdbg</span></span><br><span class="line">            <span class="attr">&quot;request&quot;</span><span class="punctuation">:</span> <span class="string">&quot;launch&quot;</span><span class="punctuation">,</span><span class="comment">//请求配置类型，可以为launch（启动）或attach（附加）</span></span><br><span class="line">            <span class="attr">&quot;program&quot;</span><span class="punctuation">:</span> <span class="string">&quot;$&#123;fileDirname&#125;\\$&#123;fileBasenameNoExtension&#125;.exe&quot;</span><span class="punctuation">,</span><span class="comment">//调试程序的路径名称</span></span><br><span class="line">            <span class="attr">&quot;args&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">]</span><span class="punctuation">,</span><span class="comment">//调试传递参数</span></span><br><span class="line">            <span class="attr">&quot;stopAtEntry&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;cwd&quot;</span><span class="punctuation">:</span> <span class="string">&quot;$&#123;workspaceFolder&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;environment&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;externalConsole&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span><span class="comment">//true显示外置的控制台窗口，false显示内置终端</span></span><br><span class="line">            <span class="attr">&quot;MIMode&quot;</span><span class="punctuation">:</span> <span class="string">&quot;gdb&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;miDebuggerPath&quot;</span><span class="punctuation">:</span> <span class="string">&quot;D:\\mingw-w64\\x86_64-8.1.0-win32-seh-rt_v6-rev0\\mingw64\\bin\\gdb.exe&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;setupCommands&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">                <span class="punctuation">&#123;</span></span><br><span class="line">                    <span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Enable pretty-printing for gdb&quot;</span><span class="punctuation">,</span></span><br><span class="line">                    <span class="attr">&quot;text&quot;</span><span class="punctuation">:</span> <span class="string">&quot;-enable-pretty-printing&quot;</span><span class="punctuation">,</span></span><br><span class="line">                    <span class="attr">&quot;ignoreFailures&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line">                <span class="punctuation">&#125;</span></span><br><span class="line">            <span class="punctuation">]</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>现编写一个debug.cpp文件测试调试，设置断点后，按下F5进入调试，如图成功调试， 左侧为变量内容：<br><img src="https://pic4.zhimg.com/80/v2-cc066b77f8e4a60d4e3c7ed50fd10a0b_720w.webp" alt="add"><br>至此，VSCode的<code>C/C++</code>开发环境已经配置完成，建议大家配置成功后，将.vscode文件夹备份一份，以后需要的时候直接复制即可，不用再花时间进行配置了。 相信有了配置C&#x2F;C++环境的基础，大家以后配置其他语言环境的时候就不会那么发怵了，赶快去体验VSCode这款好用的编辑器吧！<br><strong>转载结束</strong></p>
+<h3 id="3-使用Visual-Studio进行C-开发"><a href="#3-使用Visual-Studio进行C-开发" class="headerlink" title="3.使用Visual Studio进行C++开发"></a>3.使用Visual Studio进行C++开发</h3><p>我们先去<a target="_blank" rel="noopener" href="https://visualstudio.microsoft.com/zh-hans/downloads/">VisualStudio下载</a><br>VS有三个主要版本可供选择：Community是免费的社区版，Professional和Enterprise是收费的专业版和企业版，对于初学者三者没有区别。如果不是专业版或企业版密钥的持有者，请放心下载社区版。<br>下载下来的是一个名为vs_community.exe的小小安装器 (1.2MB)。双击启动之后，会进行Visual Studio Installer的安装 (几十MB)。它是VS特有的东西，是VS本体的安装管理器，装好并启动之后，选择Community社区版，你应该会进入一个类似这样的界面:<br><img src="https://pic2.zhimg.com/v2-d88e5debb5fe9c129cd576b830f5d935_r.jpg" alt="a"><br>在上面的工作负载选项卡，你需要按照你的开发目标选择你需要的VS组件。实现<code>C/C++</code>编程必须配置的工作负载为“使用<code>C++</code>的桌面开发”。这套组件已包含生成“桌面应用”——即Windows上传统的的.exe程序必备的所有环境。注意虽然它名字中只提到了<code>C++</code>，但对C同样是支持的，编写时注意规范即可。（.net包含了C#，F#，Visual Basic三门语言）<br>然后，选择语言：<br><img src="https://pic4.zhimg.com/v2-23a86669c94ced0093ce9030415a44fb_r.jpg" alt="lang"><br>在安装位置选项卡可以选择软件本体、下载缓存、共享组件的安装位置。注意，你可以选择非默认的位置，但必须确保第一和第三个路径中不包含任何中文，否则很可能出现装好不能用的情况！你也不想下了几十个g用不了吧！！<br>安装好后的界面如下图所示：<br><img src="https://pic2.zhimg.com/v2-a19cec1c47b5ce3784bcdefeef2c6edd_r.jpg" alt="adsa"><br>然后，在菜单栏，选择【文件】→【新建】→【项目】（快捷键Ctrl+Shift+N）<br>在弹出的新建项目对话框中，左侧有已安装可供你选择的项目类型，我们展开【Visual C++】这一栏。要编写纯C程序，建议选择【其他】→【空项目】（避免混入不需要的C++依赖）。</p>
+<p>如果是要编写C++程序，【Windows桌面】→【控制台应用】也是可以的<br><img src="https://pic2.zhimg.com/v2-99c55ed69cda406bbc0910de3b0ab4c1_r.jpg" alt="a"></p>
+<p>在下面设定好你的项目名称以及位置，确保右下方“为解决方案创建目录”已勾选，点击确定。</p>
+<p>项目新建成功后，一般界面右侧为“解决方案资源管理器”（如果找不到，点击【视图】→【解决方案资源管理器】将其唤出，快捷键Ctrl+Alt+L），在其中你可以看到我们创建的Project1项目被自动置入到了一个同名的解决方案中。<br><strong>开始半搬运（会添加一点自己的东西）</strong><br>然后右键项目名称下的【源文件】，选择【添加】→【新建项】（快捷键Ctrl+Shift+A），<br><img src="https://pic1.zhimg.com/v2-e456f68e9448fcdf3ca5736543ef7b98_r.jpg" alt="asdas"><br>在弹出的【添加新项】对话框中，选择【Visual C++】一栏中的【代码】，你将看到C++项目支持的各种类型的代码文件。常用的C++代码格式是第一个，后缀名为.cpp<br><img src="https://pic4.zhimg.com/v2-699c40ce8a61da1f13971d25b17fad2b_r.jpg" alt="dsaad"><br>然后我们输入以下代码：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;HelloWorld&quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>要生成该项目的目标程序（也就是Window上最常见的.exe程序），一般是选择菜单栏中的【生成】→【生成解决方案】<br><img src="https://pic3.zhimg.com/v2-a79bac7a21488f57bc7bc5478a64c906_r.jpg" alt="da"><br>生成过程中，你将在下面“输出”面板中看到一些信息。如果你的程序包含错误，这里则会输出不一样的信息，详情可点击左侧“错误列表”查看。<br><img src="https://pic1.zhimg.com/v2-139b4132826e4cb269dee66bfeb42cd0_r.jpg" alt="asadassa"><br>然后，选择菜单栏中的【调试】→【开始执行(不调试)】（快捷键Ctrl+F5）。<br><img src="https://pic4.zhimg.com/v2-18979425c6e23c29201ab5b800a957fb_r.jpg" alt="as"><br>这样会自动启动一个控制台并执行由该项目生成的程序。<br><img src="https://pic1.zhimg.com/v2-f83e289be98ad69a13f1b0fdd5d2ccc0_r.jpg" alt="aasdas"><br><strong>结束半搬运</strong><br>至此，VS就成功配置C++了！</p>
+<p>以上就是本篇内容了，<del>Ctrl+C Ctrl+V了</del>写了1个小时，早饭还没吃呢。有不妥的地方请在评论区指出，谢谢!</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://xzhao233.github.io/blog/2023/08/11/%E3%80%90Cpp%E3%80%91%E5%A6%82%E4%BD%95%E5%9C%A8%E4%BD%A0%E7%9A%84%E7%94%B5%E8%84%91%E4%B8%8A%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AACpp%E7%8E%AF%E5%A2%83%EF%BC%9F/" data-id="cll5zt82j0000foub24t9gn5b" data-title="【Cpp】如何在你的电脑上搭建一个Cpp环境？" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/blog/2023/07/14/WinXP%E6%80%80%E6%97%A7%E9%A1%B5%E9%9D%A2%E4%B8%8A%E7%BA%BF%EF%BC%81/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">WinXP怀旧页面上线！</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2023/08/">August 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2023/07/">July 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/2023/08/11/%E3%80%90Cpp%E3%80%91%E5%A6%82%E4%BD%95%E5%9C%A8%E4%BD%A0%E7%9A%84%E7%94%B5%E8%84%91%E4%B8%8A%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AACpp%E7%8E%AF%E5%A2%83%EF%BC%9F/">【Cpp】如何在你的电脑上搭建一个Cpp环境？</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2023/07/14/WinXP%E6%80%80%E6%97%A7%E9%A1%B5%E9%9D%A2%E4%B8%8A%E7%BA%BF%EF%BC%81/">WinXP怀旧页面上线！</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2023/07/13/%E5%B8%83%E6%B4%9B%E5%A6%AE%E5%A8%85%E5%A7%90%E5%A7%90/">布洛妮娅姐姐~</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2023/07/13/B%E7%AB%99%E8%A7%86%E9%A2%91%EF%BC%88/">B站视频（</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2023/07/13/rickrool/">rickrool</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 Xzhao<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/blog/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/blog/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/blog/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
